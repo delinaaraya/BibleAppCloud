@@ -1,0 +1,29 @@
+﻿@model FirstPageTry.Models.BibleModel
+
+<h4>Search the Bible</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchResults">
+            <div class="form-group">
+                <label class="control-label">Find a Verse</label>
+                <input name="searchTerm" class="form-control" />
+                <br />
+                <select id="ChooseTestament" name="testament" class="btn btn-dark" style="border:1px black;">
+                    <option value="" disabled selected hidden><i>Choose a Testament</i></option>
+                    <option value="NT">NT</option>
+                    <option value="OT">OT</option>
+                </select>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn-primary btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
